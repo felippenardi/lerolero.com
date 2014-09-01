@@ -11,21 +11,40 @@ angular.module('leroLeroApp')
   .factory('sentenceGenerator', function () {
     // Service logic
     var sentenceGenerator = {},
-        current,
+        current = "",
         randomize,
         sentences;
 
     sentences = [
-      "Frase 1",
-      "Frase 2",
-      "Frase 3"
+      [
+        "A 1, ",
+        "A 2, ",
+        "A 3, "
+      ],
+      [
+        "B 1, ",
+        "B 2, ",
+        "B 3, "
+      ],
+      [
+        "C 1, ",
+        "C 2, ",
+        "C 3, "
+      ],
+      [
+        "D 1.",
+        "D 2.",
+        "D 3."
+      ]
     ];
 
     randomize = function () {
-      var oldValue = current || "";
+      var oldValue = current;
       do {
-        var randomIndex = Math.floor(Math.random() * sentences.length);
-        current = sentences[randomIndex];
+        current = "";
+        sentences.each(function (args, index) {
+          current = current.add(sentences[index].sample());
+        });
       } while (oldValue === current);
     };
 
