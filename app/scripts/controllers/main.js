@@ -8,10 +8,14 @@
  * Controller of the leroLeroApp
  */
 angular.module('leroLeroApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, sentenceGenerator) {
 
     $scope.sentence = {
-      current: "Frase"
+      current: sentenceGenerator.get()
+    };
+
+    $scope.changeSentence = function () {
+      $scope.sentence.current = sentenceGenerator.get();
     };
 
   });
