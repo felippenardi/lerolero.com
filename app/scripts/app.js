@@ -10,11 +10,8 @@
  */
 angular
   .module('srcApp', [
-    'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
