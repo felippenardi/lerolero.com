@@ -9,9 +9,9 @@
  */
 angular.module('leroLeroApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.sentence = {
+      current: "Frase"
+    };
+
   });

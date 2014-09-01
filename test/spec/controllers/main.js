@@ -16,6 +16,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('', function () {
+  it('shows a sentence on init', function () {
+    expect(scope.sentence.current).toEqual(jasmine.any(String));
   });
 });
