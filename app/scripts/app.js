@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name srcApp
+ * @name leroLeroApp
  * @description
- * # srcApp
+ * # leroLeroApp
  *
  * Main module of the application.
  */
 angular
-  .module('srcApp', [
+  .module('leroLeroApp', [
     'ngResource',
     'ngRoute',
   ])
