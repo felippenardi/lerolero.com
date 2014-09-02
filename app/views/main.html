@@ -1,3 +1,5 @@
 <p>{{ sentence.current }}</p>
 
 <a href="" ng-click="changeSentence()">Gerar frase</a>
+
+<a href="http://twitter.com/home?status={{tweetMessage()}}" target="_blank" ng-show="isTweetable(sentence.current)">Tuitar</a>
